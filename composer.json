@@ -18,12 +18,11 @@
 		"php": ">=5.5",
 		"composer/installers": "*",
 		"silverstripe/framework": ">=3.1",
-		"guzzlehttp/guzzle": "6.2.x",
 		"crackerjackdigital/silverstripe-modular": "*",
 		"crackerjackdigital/silverstripe-quaff": "*"
 	},
 	"extra": {
-		"installer-name": "quaff-guzzle"
+		"installer-name": "quaff-streams"
 	},
 	"repositories": [
 		{
