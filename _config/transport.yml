@@ -1,0 +1,7 @@
+---
+Name: quaff-streams-transport
+---
+Quaff\Transports\Stream:
+  response_code_decodes:
+    '2*': 'OK'
+    '*': 'Error'
