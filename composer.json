@@ -1,7 +1,7 @@
 {
 	"name": "crackerjackdigital/silverstripe-quaff-streams",
 	"type": "silverstripe-module",
-	"description": "PHP Stream Wrappers Module for Quaff",
+	"description": "PHP Stream Wrappers Transport Module for Quaff",
 	"homepage": "http://github.com/crackerjackdigital",
 	"license": "BSD-3-Clause",
 	"keywords": [
@@ -18,6 +18,7 @@
 		"php": ">=5.5",
 		"composer/installers": "*",
 		"silverstripe/framework": ">=3.1",
+		"guzzlehttp/guzzle": "6.2.x",
 		"crackerjackdigital/silverstripe-modular": "*",
 		"crackerjackdigital/silverstripe-quaff": "*"
 	},

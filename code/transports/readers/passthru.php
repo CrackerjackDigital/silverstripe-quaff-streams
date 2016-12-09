@@ -4,11 +4,11 @@ namespace Quaff\Transports\Readers;
 use Quaff\Transports\Transport;
 
 /**
- * Trait to read a stream (or buffer) on a line-by-line basis
+ * Trait to read a stream (or buffer) as a whole chunk of content.
  *
  * @package Quaff\Transports\Buffers
  */
-trait content {
+trait passthru {
 	abstract public function getBuffer();
 
 	abstract public function meta($key = null, $stream = null);
@@ -19,8 +19,12 @@ trait content {
 	 * @param $responseCode
 	 * @return string
 	 */
-	public function read(&$responseCode) {
-		$content = $this->decode(stream_get_contents($this->getBuffer()));
+	public function read(&$responseCode = null) {
+		return $this->decode($this->readAll($responseCode));
+	}
+	
+	public function readAll(&$responseCode = null) {
+		$content = stream_get_contents($this->getBuffer());
 		$responseCode = $this->meta(Transport::MetaResponseCode);
 		return $content;
 	}

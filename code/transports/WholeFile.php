@@ -3,7 +3,7 @@ namespace Quaff\Transports;
 
 use Quaff\Transports\Buffers\passthru as buffer;
 use Quaff\Transports\Decoders\passthru as decoder;
-use Quaff\Transports\Readers\content as reader;
+use Quaff\Transports\Readers\passthru as reader;
 use Quaff\Transports\Stream\Stream;
 
 /**

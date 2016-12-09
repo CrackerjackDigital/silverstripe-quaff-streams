@@ -15,4 +15,12 @@ trait csv {
 		$responseCode = $this->meta(Transport::MetaResponseCode);
 		return $array;
 	}
+	
+	public function readAll(&$responseCode = null) {
+		$lines = [];
+		while ($line = $this->read($responseCode)) {
+			$lines[] = $line;
+		}
+		return $lines;
+	}
 }

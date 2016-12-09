@@ -54,7 +54,7 @@ trait passthru {
 	 * @param null   $responseCode
 	 * @param null   $contentType
 	 * @param null   $contentLength
-	 * @return $this
+	 * @return boolean
 	 */
 	public function buffer($uri, &$responseCode = null, &$contentType = null, &$contentLength = null) {
 		$this->_uri = null;

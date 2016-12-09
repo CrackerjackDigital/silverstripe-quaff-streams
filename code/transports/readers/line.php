@@ -24,4 +24,12 @@ trait line {
 		$responseCode = $this->meta(Transport::MetaResponseCode);
 		return $line;
 	}
+	
+	public function readAll(&$responseCode = null) {
+		$lines = [];
+		while ($line = $this->read($responseCode)) {
+			$lines[] = $line;
+		}
+		return $lines;
+	}
 }
